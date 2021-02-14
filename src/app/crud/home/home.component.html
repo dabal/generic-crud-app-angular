@@ -1,0 +1,85 @@
+<h2>{{title}}</h2>
+<div *ngIf="showSucces" class="alert alert-success" role="alert">
+    Operacja zakończona sukcesem!
+    
+</div>
+<div *ngIf="hasFilters()">
+    <app-filters></app-filters>
+</div>
+<div>
+      <ejs-grid *ngIf="visibleGrid" #grid [dataSource]="responseData['data']" [allowSorting]="true" [toolbar]='toolbar'
+        [editSettings]='editSettings' (actionComplete)="actionComplete($event)" (actionBegin)='actionBegin($event)'>
+        <e-columns>
+            <ng-template ngFor let-column [ngForOf]="columns" let-i="index">
+
+                <!-- dropdown -->
+                <e-column *ngIf="getColumnType(column)==='dropdown'" field='{{column}}'
+                    [allowEditing]="!responseData['meta']['columns'][column]['readOnly']"
+                    headerText="{{responseData['meta']['columns'][column]['label']}}" width={{getColumnWidth(column)}}
+                    editType="dropDownEdit"  [visible]="getColumnVisibility(column)">
+                </e-column>
+                <!-- date picker -->
+                <e-column *ngIf="getColumnType(column)==='date_picker'" field='{{column}}'
+                    [allowEditing]="!responseData['meta']['columns'][column]['readOnly']"
+                    headerText="{{responseData['meta']['columns'][column]['label']}}" width={{getColumnWidth(column)}}
+                    editType="datePickerEdit" format="yyyy-MM-dd" type="date"   [visible]="getColumnVisibility(column)">
+                </e-column>
+<!-- html editor -->
+                <e-column *ngIf="getColumnType(column)==='html_editor'" field='{{column}}'
+                [allowEditing]="!responseData['meta']['columns'][column]['readOnly']"
+                headerText="{{responseData['meta']['columns'][column]['label']}}" width={{getColumnWidth(column)}}  [visible]="getColumnVisibility(column)">
+            </e-column>
+
+                <e-column *ngIf="getColumnType(column)==='other'" field='{{column}}'
+                    [allowEditing]="!responseData['meta']['columns'][column]['readOnly']"
+                    headerText="{{responseData['meta']['columns'][column]['label']}}" width={{getColumnWidth(column)}}   [visible]="getColumnVisibility(column)">
+                </e-column>
+            </ng-template>
+        </e-columns>
+        <ng-template #editSettingsTemplate let-data>
+
+            <div [formGroup]="editForm" class="form-group col-6">
+                <!-- <form ></form>[formGroup]="form" (ngSubmit)="onSubmit()"> -->
+                <div *ngFor="let column of columns;let i=index" class="col-2">
+
+                    <!-- <label for="{{columns[i]}}">{{responseData['meta']['columns'][column]['label']}}</label> -->
+
+                    <!-- dropdown  -->
+                    <ejs-dropdownlist *ngIf="getColumnType(column)==='dropdown'" 
+                        [dataSource]="responseData['meta']['columns'][columns[i]]['values']" [fields]='dropdownFields'
+                        placeholder="{{responseData['meta']['columns'][column]['label']}}" floatLabelType="Always"
+                        formControlName="{{columns[i]}}">
+                    </ejs-dropdownlist>
+
+                    <!-- date_picker -->
+                    <ejs-datepicker *ngIf="getColumnType(column)==='date_picker'" 
+                        format="yyyy-MM-dd" placeholder="{{responseData['meta']['columns'][column]['label']}}"
+                        floatLabelType="Always" formControlName="{{columns[i]}}"></ejs-datepicker>
+
+                    <!-- html_editor -->
+                    <ejs-richtexteditor *ngIf="getColumnType(column)==='html_editor'" 
+                        placeholder="{{responseData['meta']['columns'][column]['label']}}" floatLabelType="Always"
+                        formControlName="{{columns[i]}}">
+                       
+                    </ejs-richtexteditor>
+                    
+                    
+                        <!-- textbox -->
+                    <ejs-textbox *ngIf="getColumnType(column)==='other'" 
+                        placeholder="{{responseData['meta']['columns'][column]['label']}}" floatLabelType="Always"
+                        formControlName="{{columns[i]}}">
+                    </ejs-textbox>
+
+
+
+
+                </div>
+
+
+                <!-- </form> -->
+            </div>
+        </ng-template>
+    </ejs-grid>
+
+
+</div>

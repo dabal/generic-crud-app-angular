@@ -1,0 +1,19 @@
+{
+    "request":
+    {
+    "urlPattern": "/meta/views",
+    "method": "ANY"
+    },
+   
+    "response":
+    {
+    "status": 200,
+    "headers":
+    {
+    "Content-Type" : "application/json",
+    "Access-Control-Allow-Methods" : "*",
+    "Access-Control-Allow-Headers": "*"
+    },
+    "bodyFileName": "response/menu.json"
+    }
+}

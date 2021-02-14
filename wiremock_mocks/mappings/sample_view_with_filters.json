@@ -1,0 +1,18 @@
+{
+    "request": {
+        "method": "ANY",
+        "urlPattern": "/crud/.*"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "response/sentences.json",
+        "statusMessage": "Everything was just fine!",
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "*",
+            "X-Content-Type-Options": "nosniff",
+            "x-frame-options": "DENY",
+            "x-xss-protection": "1; mode=block"
+        }
+    }
+}

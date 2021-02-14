@@ -1,0 +1,180 @@
+{
+    "data": [
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12973,
+            "lang": "ru",
+            "title": "tytuł",
+            "content": "<strong>Здравствуй, Новый Год.</strong> (...) Сегодня я с любовью вся предаюсь Твоей святой воле и Твоим мудрейшим решениям, которые для меня всегда полны любви и милосердия, хотя иногда я их не понимаю и не могу постичь. Мой Учитель, я полностью отдаю Тебе руль моей души, направляй ее Сам согласно Своим Божественным желаниям (Дн. 1449-1450)."
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12974,
+            "lang": "es",
+            "title": "Divina Misericordia",
+            "content": "Bienvenido, Ańo Nuevo. (...) Hoy me someto totalmente a Tu santa voluntad, oh Seńor, y a Tus justísimos designios que para mí son siempre los más bondadosos y llenos de misericordia, aunque a veces no los comprendo ni puedo penetrarlos. Oh Maestro mío, heme aquí, yo, confiándote completamente el timón de mi alma, guíala según Tu divina complacencia (Diario 1449-1450)."
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12975,
+            "lang": "it",
+            "title": "La Misericordia Divina",
+            "content": "<p style=\\\"text-align: justify;\\\">Je voulais absolument approfondir ma réflexion et découvrir qui est ce Dieu… Soudain, ce fut comme si mon esprit était transporté dans un autre monde. J’ ai vu une clarté inaccessible. (…) Et de cette clarté une voix s’ est fait entendre : <strong><em>Ce que Dieu est dans son essence, personne ne le comprendra jamais, ni l’ intelligence des anges, ni l’ intelligence des hommes.</em></strong> (…) <strong><em>Cherche à connaître Dieu en méditant ses attributs</em></strong> (P. J. 30).</p>"
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12976,
+            "lang": "de",
+            "title": "Barmherzigkeit Gottes",
+            "content": "Sei gegrüßt, Neues Jahr (...). Daher will ich heute in Liebe meinen Willen ganz deinem heiligen Willen unterordnen, o Herr, sowie deinem weisen Urteil, das für mich stets voller Liebe und Barmherzigkeit ist, auch wenn ich es manchmal nicht verstehen oder ergründen kann. Meister mein, ich überlasse das Steuer meiner Seele ganz dir; führe sie selbst nach deinem göttlichen Belieben (TB 1449-1450)."
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12977,
+            "lang": "en",
+            "title": "Divine Mercy",
+            "content": "Welcome to you, New Year. (...) So today I submit myself completely and with loving consent to Your holy will, O Lord, and to Your most wise decrees, which are always full of clemency and mercy for me, though at times I can neither understand nor fathom them. O my Master, I surrender myself completely to You, who are the rudder of my soul; steer it Yourself according to Your divine wishes (Diary 1449–1450). "
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12978,
+            "lang": "pl",
+            "title": "Miłosierdzie Boże",
+            "content": "Witaj, Nowy Roku. (&hellip;) Dziś z miłującą wolą poddaję się zupełnie świętej woli Twojej, <br>o Panie, i najmędrszym wyrokom Twoim, które są zawsze dla mnie najmiłościwsze i pełne miłosierdzia, choć ich nieraz nie rozumiem ani przeniknąć nie mogę. Mistrzu mój, oto oddaję Ci całkowicie ster mej duszy, prowadź ją sam według swych Boskich upodobań (Dz. 1449&ndash;1450)."
+        },
+        {
+            "date": "2020-01-01",
+            "diary_nr": "1",
+            "id": 12979,
+            "lang": "fr",
+            "title": "Miséricorde Divine",
+            "content": "Sois la bienvenue, Année Nouvelle. (…) Aujourd’ hui, Seigneur, avec une volonté aimante, je m’ abandonne entièrement à ta sainte volonté et à tes très sages décrets, toujours pleins d’ amour et de miséricorde pour moi, même si, parfois, je ne peux ni les comprendre, ni les pénétrer. Mon Maître, voici que je t’ abandonne entièrement le gouvernail de mon âme : dirige-la toi-même selon ton divin plaisir (P.J. 1449-1450)."
+        }
+    ],
+    "meta": {
+        "label": "Sentencje",
+        "available_actions_in_list_view": [
+            "Edit",
+            "Add"
+        ],
+        "available_actions_in_details_view": [],
+        "filters": {
+            "lang": {
+                "type": "dropdown",
+                "label": "język",
+                "values": [
+                    {
+                        "key": "pl",
+                        "value": "polski"
+                    },
+                    {
+                        "key": "en",
+                        "value": "angielski"
+                    },
+                    {
+                        "key": "de",
+                        "value": "niemiecki"
+                    },
+                    {
+                        "key": "it",
+                        "value": "włoski"
+                    },
+                    {
+                        "key": "ru",
+                        "value": "rosyjski"
+                    },
+                    {
+                        "key": "es",
+                        "value": "hiszpański"
+                    },
+                    {
+                        "key": "fr",
+                        "value": "francuski"
+                    },
+                    {
+                        "key": "sk",
+                        "value": "słowacki"
+                    }
+                ]
+            },
+            "date_from": {
+                "type": "date_picker",
+                "label": "data od"
+            },
+            "date_to": {
+                "type": "date_picker",
+                "label": "data do"
+            }
+        },
+        "columns": {
+            "id": {
+                "readOnly": true,
+                "label": "id"
+            },
+            "date": {
+                "readOnly": false,
+                "label": "data",
+                "type": "date_picker"
+            },
+            "lang": {
+                "readOnly": false,
+                "label": "język",
+                "type": "dropdown",
+                "values": [
+                    {
+                        "key": "pl",
+                        "value": "polski"
+                    },
+                    {
+                        "key": "en",
+                        "value": "angielski"
+                    },
+                    {
+                        "key": "de",
+                        "value": "niemiecki"
+                    },
+                    {
+                        "key": "it",
+                        "value": "włoski"
+                    },
+                    {
+                        "key": "ru",
+                        "value": "rosyjski"
+                    },
+                    {
+                        "key": "es",
+                        "value": "hiszpański"
+                    },
+                    {
+                        "key": "fr",
+                        "value": "francuski"
+                    },
+                    {
+                        "key": "sk",
+                        "value": "słowacki"
+                    }
+                ]
+            },
+            "diary_nr": {
+                "readOnly": false,
+                "label": "nr dzienniczka"
+            },
+            "title": {
+                "readOnly": false,
+                "label": "tytuł"
+            },
+            "content": {
+                "readOnly": false,
+                "label": "sentencja",
+                "width": 250,
+                "type": "html_editor"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+
+            <div *ngFor="let column of columns;let i=index">
+                <label for="{{columns[i]}}">{{responseData['meta']['columns'][columns[i]]['label']}}</label>
+                <input type="text" formControlName="{{columns[i]}}" id="{{columns[i]}}" class="form-control" />
+            </div>
+
+        </div>
+
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary m-4">Zapisz</button>
+        <button type="button" [routerLink]="['/dashboard/crud', viewId]" class="btn btn-secondary m-4">Anuluj</button>
+    </form>
+</div>

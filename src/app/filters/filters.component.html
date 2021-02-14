@@ -1,0 +1,28 @@
+<div class="form-group col-6 p-1pp">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <div *ngFor="let column of columns;let i=index" class="col-md-2">
+
+
+
+                <!-- dropdown  -->
+                <ejs-combobox *ngIf="responseData['meta']['filters'][columns[i]]['type']==='dropdown'"
+                    id="{{columns[i]}}" [dataSource]="responseData['meta']['filters'][columns[i]]['values']"
+                    [fields]='dropdownFields' formControlName="{{columns[i]}}"
+                    placeholder="{{responseData['meta']['filters'][column]['label']}}" floatLabelType="Always">
+                </ejs-combobox>
+
+                <!-- date_picker -->
+                <ejs-datepicker *ngIf="responseData['meta']['filters'][columns[i]]['type']==='date_picker'"
+                    id="{{columns[i]}}" formControlName="{{columns[i]}}" format="yyyy-MM-dd"
+                    placeholder="{{responseData['meta']['filters'][column]['label']}}" floatLabelType="Always">
+                </ejs-datepicker>
+
+            </div>
+
+        </div>
+        <div calss="col-md-2">
+            <button type="submit" [disabled]="!form.valid" class="btn btn-primary m-4">Zastosuj</button>
+        </div>
+    </form>
+</div>

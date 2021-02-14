@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+
+      <ng-template ngFor let-elem [ngForOf]="responseData" let-i="index">
+
+        <li class="dropdown" *ngIf="elem['type']==='dropdown'; else elseBlock">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">{{getLabel(elem['view_id'])}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let sElement of elem['elements']"><a [routerLink]="['/dashboard/crud/', sElement['view_id']]"
+                class="navbar-inverse-link">{{getLabel(sElement['view_id'])}}</a></li>
+
+          </ul>
+        </li>
+
+        <ng-template #elseBlock>
+          <li><a [routerLink]="['/dashboard/crud/', elem['view_id']]">{{getLabel(elem['view_id'])}}</a></li>
+        </ng-template>
+
+
+      </ng-template>
+
+
+
+
+    </ul>
+
+  </div>
+
+</nav>
